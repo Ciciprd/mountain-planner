@@ -1,0 +1,29 @@
+﻿@model List<MountainPlanner.Models.Ferrata>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ferratas</h1>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => Model[0].Id)</th>
+            <th>@Html.DisplayNameFor(m => Model[0].Name)</th>
+            <th>@Html.DisplayNameFor(m => Model[0].Difficulty)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ferrata in Model)
+        {
+
+            <tr>
+                <td>@ferrata.Id</td>
+                <td>@ferrata.Name</td>
+                <td>@ferrata.Difficulty</td>
+            </tr>
+        }
+    </tbody>
+</table>
